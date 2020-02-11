@@ -1,0 +1,5 @@
+# Mod_Rewrite будет только для photo.php  
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^photo/([0-9]+)/? photo.php [L]
