@@ -108,42 +108,62 @@ while ($a <= 15)
 ?><br/>
 <li><b>3. Реализуйте основные 4 арифметические операции (+, -, *, %)</b></li>
 <?
-function math_sum ($x,$y)
+function addition ($x,$y)
 {
     return ($x+$y);
 }
-$sum = math_sum(5,7); //для получения результата ввести значения
-echo $sum;
+$add = addition(5,7); //для получения результата ввести значения
+echo $add;
 ?><br/>
 <?
-function math_dif ($x,$y)
+function subtraction ($x,$y)
 {
     return ($x-$y);
 }
-$dif = math_dif(5,7); //для получения результата ввести значения
-echo $dif;
+$sub = subtraction(5,7); //для получения результата ввести значения
+echo $sub;
 ?><br/>
 <?
-function math_div ($x,$y)
+function division ($x,$y)
 {
-    return ($x/$y);
+    if ($y==0) $result="на ноль делить нельзя!";
+    else $result=$x/$y;
+    return $result;
 }
-$div = math_div(10,2); //для получения результата ввести значения
+$div = division(10,2); //для получения результата ввести значения
 echo $div;
 ?><br/>
 <?
-function math_mul ($x,$y)
+function multiplication ($x,$y)
 {
     return ($x*$y);
 }
-$mul = math_mul(10,2); //для получения результата ввести значения
-echo $mul;
+$mult = multiplication(10,2); //для получения результата ввести значения
+echo $mult;
 ?><br/>
 
 <li><b>4. Реализуйте функцию с тремя параметрами</b></li>
 <!--  function mathOperation($arg1, $arg2, $operation),
  где $arg1, $arg2 – значения аргументов,
   $operation – строка с названием операции. -->
-
+<?
+function mathOperation($arg1, $arg2, $operation){
+    switch ($operation){
+        case '$add':
+        return addition($arg1,$arg2);
+        break;
+        case '$sub':
+        return subtraction($arg1,$arg2);
+        break;
+        case '$div':
+        return division($arg1,$arg2);
+        break;
+        case '$mult':
+        return multiplication($arg1,$arg2);
+        break;
+    }
+}
+echo mathOperation(2,2,$mult);
+?>
 </body>
 </html>
