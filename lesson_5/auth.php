@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dusty
- * Date: 22.10.2015
- * Time: 22:32
- */
+
 session_start();
 
 if ((!isset($_SESSION['username']))&&(!isset($_COOKIE['username'])))

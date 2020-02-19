@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dusty
- * Date: 22.10.2015
- * Time: 22:08
- */
 header("Content-type: text/html; charset=utf-8;");
 if (isset($_POST['username']))
 {
